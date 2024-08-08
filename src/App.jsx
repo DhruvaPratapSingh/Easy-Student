@@ -1,11 +1,11 @@
-import { Button } from "./components/ui/button"
 import Navbar from "./_components/Navbar"
 import { Routes,Route} from "react-router"
-import Faq from "./_components/insiderpage/Faq"
-import Home from "./_components/insiderpage/Home"
-import Internship from "./_components/insiderpage/Internship"
-import Contact from "./_components/insiderpage/Contact"
-import Contest from "./_components/insiderpage/Contest"
+import Faq from "./_components/page/Faq"
+import Home from "./_components/page/Home"
+import Internship from "./_components/page/Internship"
+import Contact from "./_components/page/Contact"
+import Contest from "./_components/page/Contest"
+import  Learnmore  from "./_components/page/insiderpage/Learn_more"
 export default function App() {
   return (<>
     <Navbar/>
@@ -15,6 +15,7 @@ export default function App() {
     <Route path="/contact" element={<Contact/>}/>
     <Route path="/internship" element={<Internship/>}/>
     <Route path="/faq" element={<Faq/>}/>
+    <Route path="/learn_more/:id" element={<Learnmore/>}/>
    </Routes>
   </>
   )
