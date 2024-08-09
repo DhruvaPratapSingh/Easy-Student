@@ -3,6 +3,8 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import Typography from '@mui/material/Typography';
 import cardData from '../../utils/cardData';
+import FileUpload from './Fileupload';
+
 
 const LearnMore = () => {
   const { id } = useParams();
@@ -33,7 +35,8 @@ const LearnMore = () => {
       <Typography>
        <p className='text-xl font-medium'>skills:{card.skills}</p>
       </Typography>
-      <button className='bg-blue-600 py-1 px-3 rounded-xl font-medium hover:bg-blue-400 mt-5'>Apply</button>
+      {/* <button className='bg-blue-600 py-1 px-3 rounded-xl font-medium hover:bg-blue-400 mt-5'>Apply</button> */}
+      <FileUpload />
     </div>
   );
 };

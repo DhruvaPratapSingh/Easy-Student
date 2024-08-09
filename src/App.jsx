@@ -6,6 +6,8 @@ import Internship from "./_components/page/Internship"
 import Contact from "./_components/page/Contact"
 import Contest from "./_components/page/Contest"
 import  Learnmore  from "./_components/page/insiderpage/Learn_more"
+import AppliedPage from "./_components/page/Appliedpage"
+import  Hackthon  from "./_components/page/Hackthon"
 export default function App() {
   return (<>
     <Navbar/>
@@ -16,6 +18,8 @@ export default function App() {
     <Route path="/internship" element={<Internship/>}/>
     <Route path="/faq" element={<Faq/>}/>
     <Route path="/learn_more/:id" element={<Learnmore/>}/>
+    <Route path="/applied" element={<AppliedPage/>} />
+    <Route path="/hackthon" element={<Hackthon/>} />
    </Routes>
   </>
   )

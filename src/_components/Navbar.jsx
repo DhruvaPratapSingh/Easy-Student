@@ -28,9 +28,10 @@ const Navbar = () => {
         <Link to="/" className="font-medium hover:text-primary">home</Link>
         <Link to="/contest" className="font-medium hover:text-primary">contest</Link>
         <Link to="/internship" className="font-medium hover:text-primary">internship</Link>
-        <Link to="/hackathon" className="font-medium hover:text-primary">hackathon</Link>
+        <Link to="/hackthon" className="font-medium hover:text-primary">hackathon</Link>
         <Link to="/contact" className="font-medium hover:text-primary">contact</Link>
         <Link to="/faq" className="font-medium hover:text-primary">FAQ</Link>
+        <Link to="/applied" className="font-medium hover:text-primary">Applied Files</Link>
       </div>
       <div className="hidden lg:flex flex-1 justify-end">
         <button className="flex gap-2 items-center border border-gray-400 px-6 py-2 rounded-lg hover:border-gray-600">
@@ -59,9 +60,11 @@ const Navbar = () => {
             <Link to="/" className="font-medium text-xl hover:text-blue-600 block hover:bg-slate-400 rounded-lg p-3 hover:shadow-4xl" onClick={handleClick}>home</Link>
             <Link to="/contest" className="font-medium text-xl hover:text-blue-600 block hover:bg-slate-400 rounded-lg p-3 hover:shadow-4xl" onClick={handleClick}>contest</Link>
             <Link to="/internship" className="font-medium text-xl hover:text-blue-600 block hover:bg-slate-400 rounded-lg p-3 hover:shadow-4xl" onClick={handleClick}>internship</Link>
-            <Link to="/hackathon" className="font-medium text-xl hover:text-blue-600 block hover:bg-slate-400 hover:shadow-4xl rounded-lg p-3" onClick={handleClick}>hackathon</Link>
+            <Link to="/hackthon" className="font-medium text-xl hover:text-blue-600 block hover:bg-slate-400 hover:shadow-4xl rounded-lg p-3" onClick={handleClick}>hackathon</Link>
             <Link to="/contact" className="font-medium text-xl hover:text-blue-600 block hover:bg-slate-400 rounded-lg p-3 hover:shadow-4xl hover:shadow-teal-400" onClick={handleClick}>Contact Us</Link>
             <Link to="/faq" className="font-medium text-xl hover:text-blue-600 block hover:bg-slate-400 rounded-lg p-3 hover:shadow-4xl" onClick={handleClick}>FAQ</Link>
+            <Link to="/applied" className="font-medium text-xl hover:text-blue-600 block hover:bg-slate-400 rounded-lg p-3 hover:shadow-4xl" onClick={handleClick}>applied</Link>
+            
           </div>
           <div className="h-[1px] bg-gray-300"></div>
           <button className="mt-6 w-full flex gap-2 items-center px-6 py-4 rounded-lg hover:bg-gray-50">
