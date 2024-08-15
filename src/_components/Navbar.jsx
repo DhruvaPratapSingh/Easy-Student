@@ -19,7 +19,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex justify-between items-center w-full p-4 bg-slate-300 shadow-2xl border-b-2 border-b-slate-400 rounded-b-lg">
+    <nav className="flex justify-between items-center w-full p-4 bg-slate-300 shadow-2xl border-b-2 border-b-slate-400 rounded-b-lg relative">
       <Link to="/" id="brand" className="flex gap-2 items-center flex-1">
         <img className="object-cover max-w-12 max-h-12" src={logo} alt="Logo" />
         <span className="text-lg font-medium font-display">EasyStudent</span>
