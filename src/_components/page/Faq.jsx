@@ -38,7 +38,7 @@ function Faq() {
       <div className="w-full md:w-2/3 lg:w-1/2 xl:w-1/3 p-3">
         <form
           onSubmit={generateAnswer}
-          className="text-center rounded-lg shadow-lg bg-white py-6 px-4 transition-all duration-500 transform sticky top-0 z-10"
+          className="text-center rounded-lg shadow-lg bg-white py-6 px-4 transition-all duration-500 transform sticky top-0 "
         >
           <h1 className="text-4xl font-bold text-blue-500 mb-4 animate-bounce">
             Chat AI
