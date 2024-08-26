@@ -9,8 +9,7 @@ import  Learnmore  from "./_components/page/insiderpage/Learn_more"
 import AppliedPage from "./_components/page/Appliedpage"
 import Preparation from "./_components/page/Preparation"
 import CompanyCategory from "./_components/page/insiderpage/component/comanywise/CompanyCategory"
-import Tcs from "./_components/page/insiderpage/component/insidecompany/Tcs"
-import TitlePage from "./_components/page/insiderpage/component/insidecompany/Tcs"
+import TitlePage from "./_components/page/insiderpage/component/comanywise/CompanyDetails"
 export default function App() {
   return (<>
     <Navbar/>
