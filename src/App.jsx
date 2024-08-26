@@ -23,7 +23,6 @@ export default function App() {
     <Route path="/applied" element={<AppliedPage/>} />
     <Route path="/preparation" element={<Preparation/>} />
     <Route path="/open_more/:id" element={<CompanyCategory />} />
-    {/* <Route  path="/tcs" element={<Tcs/>}/> */}
     <Route path="/title/:title" element={<TitlePage/>} />
    </Routes>
   </>

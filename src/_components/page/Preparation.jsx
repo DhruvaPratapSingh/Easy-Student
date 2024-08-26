@@ -1,5 +1,4 @@
-import Profile from './insiderpage/component/prepguide/profile'
-
+import Profile from "./insiderpage/component/prepguide/Profile"
 const Preparation = () => {
   return (
     <div>
