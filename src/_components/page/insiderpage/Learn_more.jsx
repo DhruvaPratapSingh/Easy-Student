@@ -1,5 +1,3 @@
-// src/components/insiderpage/Learn_more.js
-import React from 'react';
 import { useParams } from 'react-router-dom';
 import Typography from '@mui/material/Typography';
 import cardData from '../../utils/cardData';

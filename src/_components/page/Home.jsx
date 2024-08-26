@@ -8,7 +8,7 @@ const Home = () => {
       <div className="flex flex-wrap justify-center gap-4 mb-6">
         <Card title="Internship" path="/internship" />
         <Card title="Contest" path="/contest" />
-        <Card title="Hackathon" path="/hackthon" />
+        <Card title="Prepguide" path="/preparation" />
         <Card title="Ask Something" path="/faq" />
       </div>
       <div className="text-center">

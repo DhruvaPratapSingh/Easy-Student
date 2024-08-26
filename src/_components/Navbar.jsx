@@ -28,7 +28,7 @@ const Navbar = () => {
         <Link to="/" className="font-medium hover:text-primary">home</Link>
         <Link to="/contest" className="font-medium hover:text-primary">contest</Link>
         <Link to="/internship" className="font-medium hover:text-primary">internship</Link>
-        <Link to="/hackthon" className="font-medium hover:text-primary">hackathon</Link>
+        <Link to="/preparation" className="font-medium hover:text-primary">Prep_Guide</Link>
         <Link to="/contact" className="font-medium hover:text-primary">contact</Link>
         <Link to="/faq" className="font-medium hover:text-primary">FAQ</Link>
         <Link to="/applied" className="font-medium hover:text-primary">Applied Files</Link>
@@ -60,7 +60,7 @@ const Navbar = () => {
             <Link to="/" className="font-medium text-xl hover:text-blue-600 block hover:bg-slate-400 rounded-lg p-3 hover:shadow-4xl" onClick={handleClick}>home</Link>
             <Link to="/contest" className="font-medium text-xl hover:text-blue-600 block hover:bg-slate-400 rounded-lg p-3 hover:shadow-4xl" onClick={handleClick}>contest</Link>
             <Link to="/internship" className="font-medium text-xl hover:text-blue-600 block hover:bg-slate-400 rounded-lg p-3 hover:shadow-4xl" onClick={handleClick}>internship</Link>
-            <Link to="/hackthon" className="font-medium text-xl hover:text-blue-600 block hover:bg-slate-400 hover:shadow-4xl rounded-lg p-3" onClick={handleClick}>hackathon</Link>
+            <Link to="/preparation" className="font-medium text-xl hover:text-blue-600 block hover:bg-slate-400 hover:shadow-4xl rounded-lg p-3" onClick={handleClick}>Prep_Guide</Link>
             <Link to="/contact" className="font-medium text-xl hover:text-blue-600 block hover:bg-slate-400 rounded-lg p-3 hover:shadow-4xl hover:shadow-teal-400" onClick={handleClick}>Contact Us</Link>
             <Link to="/faq" className="font-medium text-xl hover:text-blue-600 block hover:bg-slate-400 rounded-lg p-3 hover:shadow-4xl" onClick={handleClick}>FAQ</Link>
             <Link to="/applied" className="font-medium text-xl hover:text-blue-600 block hover:bg-slate-400 rounded-lg p-3 hover:shadow-4xl" onClick={handleClick}>applied</Link>

@@ -7,7 +7,10 @@ import Contact from "./_components/page/Contact"
 import Contest from "./_components/page/Contest"
 import  Learnmore  from "./_components/page/insiderpage/Learn_more"
 import AppliedPage from "./_components/page/Appliedpage"
-import  Hackthon  from "./_components/page/Hackthon"
+import Preparation from "./_components/page/Preparation"
+import CompanyCategory from "./_components/page/insiderpage/component/comanywise/CompanyCategory"
+import Tcs from "./_components/page/insiderpage/component/insidecompany/Tcs"
+import TitlePage from "./_components/page/insiderpage/component/insidecompany/Tcs"
 export default function App() {
   return (<>
     <Navbar/>
@@ -19,7 +22,10 @@ export default function App() {
     <Route path="/faq" element={<Faq/>}/>
     <Route path="/learn_more/:id" element={<Learnmore/>}/>
     <Route path="/applied" element={<AppliedPage/>} />
-    <Route path="/hackthon" element={<Hackthon/>} />
+    <Route path="/preparation" element={<Preparation/>} />
+    <Route path="/open_more/:id" element={<CompanyCategory />} />
+    {/* <Route  path="/tcs" element={<Tcs/>}/> */}
+    <Route path="/title/:title" element={<TitlePage/>} />
    </Routes>
   </>
   )
