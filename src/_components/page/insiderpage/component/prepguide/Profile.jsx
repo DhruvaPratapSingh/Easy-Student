@@ -33,7 +33,7 @@ const Profile = () => {
         <div></div> {/* This empty div ensures the Select box stays on the right */}
         <Box sx={{ minWidth: 120 }} className="ml-auto">
           <FormControl fullWidth>
-            <InputLabel id="card-select-label">Search Job</InputLabel>
+            <InputLabel id="card-select-label">Search prepCat</InputLabel>
             <Select
               labelId="card-select-label"
               id="card-select"

@@ -9,7 +9,13 @@ const LearnMore = () => {
   const card = cardData.find(card => card.id.toString() === id);
 
   if (!card) {
-    return <Typography variant="h6" color="error">Card not found</Typography>;
+    return(
+       <div className='flex flex-col gap-10 justify-center items-center'>
+        <Typography variant="h6" color="error">Data will be uploaded shortly....</Typography>
+        <img className='flex justify-center items-center' src="/waiting.gif" />
+       </div>
+       
+    )
   }
 
   return (
