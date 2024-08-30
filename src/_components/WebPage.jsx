@@ -9,7 +9,7 @@ const WebPage = () => {
       <Navbar />
       <div className="p-8">
         <section id="home" className="mb-12">
-        <SignInButton><h1 className='text-center font-bold text-xl cursor-pointer'>Sign In to show full content</h1></SignInButton>
+        <SignInButton><div className='text-center font-bold text-xl cursor-pointer hover:text-blue-500'>Sign In to show full content</div></SignInButton>
           <h1 className="text-3xl font-bold mb-4">Welcome to EasyStudent</h1>
           <p className="text-lg">
             EasyStudent is your one-stop platform for managing your academic journey. Whether you are looking for internships, preparing for contests, or seeking guidance on preparation, we have you covered.
