@@ -10,9 +10,16 @@ import AppliedPage from "./_components/page/Appliedpage"
 import Preparation from "./_components/page/Preparation"
 import CompanyCategory from "./_components/page/insiderpage/component/comanywise/CompanyCategory"
 import TitlePage from "./_components/page/insiderpage/component/comanywise/CompanyDetails"
+import { SignedIn, SignedOut, SignInButton, useUser} from "@clerk/clerk-react";
+import WebPage from "./_components/WebPage"
+
 export default function App() {
+  const {user}=useUser();
   return (<>
+   {user? 
+   <div>
     <Navbar/>
+    <SignedIn>
    <Routes>
     <Route path="/" element={<Home/>}/>
     <Route path="/contest" element={<Contest/>}/>
@@ -25,6 +32,9 @@ export default function App() {
     <Route path="/open_more/:id" element={<CompanyCategory />} />
     <Route path="/title/:title" element={<TitlePage/>} />
    </Routes>
+    </SignedIn>
+      </div>
+    :<WebPage/>}
   </>
   )
 }

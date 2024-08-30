@@ -3,10 +3,11 @@ import { FaBars, FaArrowRight, FaTimes } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import logo from '/OIP.jpeg';
 import Icon from '/coder_logo.avif';  
-
+import { UserButton, SignedIn, useUser,SignInButton,SignedOut } from '@clerk/clerk-react';
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [linksVisible, setLinksVisible] = useState(true);
+  const {user}=useUser();
 
   const handleClick = () => {
     setLinksVisible(false);
@@ -19,9 +20,9 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex justify-between items-center w-full p-4 bg-slate-300 shadow-2xl border-b-2 border-b-slate-400 rounded-b-lg relative">
+    <nav className="flex justify-between items-center w-full p-4 bg-slate-300 shadow-2xl border-b-2 border-b-slate-200 rounded-b-lg relative">
       <Link to="/" id="brand" className="flex gap-2 items-center flex-1">
-        <img className="object-cover max-w-12 max-h-12" src={logo} alt="Logo" />
+        <img className="object-cover max-w-12 max-h-12 mix-blend-color-burn" src={logo} alt="Logo" />
         <span className="text-lg font-medium font-display">EasyStudent</span>
       </Link>
       <div id="nav-menu" className="hidden lg:flex gap-12">
@@ -35,21 +36,30 @@ const Navbar = () => {
       </div>
       <div className="hidden lg:flex flex-1 justify-end">
         <button className="flex gap-2 items-center border border-gray-400 px-6 py-2 rounded-lg hover:border-gray-600">
-          <img className="object-cover max-w-12 max-h-10" src={Icon} alt="Coder" />
-          <span className="font-display font-medium">Coders</span>
-          <FaArrowRight />
+          {/* <img className="object-cover max-w-12 max-h-10" src={Icon} alt="Coder" /> */}
+          <SignedIn>
+        <UserButton />
+          </SignedIn>
+          <span className="font-display font-medium">{
+           user?  user?.fullName : <SignedOut>
+            <SignInButton/>
+           </SignedOut>
+          }</span>
+          {/* <FaArrowRight /> */}
         </button>
       </div>
 
-      <button className="p-2 lg:hidden" onClick={handleMenu}>
-        <FaBars className="text-gray-600" />
+     <button className="p-2 lg:hidden" onClick={handleMenu}>
+     {user? <FaBars className="text-gray-600" />:<SignedOut><SignInButton/></SignedOut>}
+        
       </button>
-
       {isMenuOpen && linksVisible && (
+                    
         <div id="nav-dialog" className="fixed z-10 lg:hidden bg-white inset-0 p-3">
+       
           <div id="nav-bar" className="flex justify-between">
             <Link to="#" id="brand" className="flex gap-2 items-center">
-              <img className="object-cover max-w-12 max-h-12" src={logo} alt="Logo" />
+              <img className="object-cover max-w-12 max-h-12 " src={logo} alt="Logo" />
               <span className="text-lg font-medium font-display">EasyStudent</span>
             </Link>
             <button className="p-2 lg:hidden" onClick={handleMenu}>
@@ -68,8 +78,11 @@ const Navbar = () => {
           </div>
           <div className="h-[1px] bg-gray-300"></div>
           <button className="mt-6 w-full flex gap-2 items-center px-6 py-4 rounded-lg hover:bg-gray-50">
-            <img className="object-cover max-w-12 max-h-12" src={Icon} alt="Coder" />
-            <span>Coders</span>
+            {/* <img className="object-cover max-w-12 max-h-12" src={Icon} alt="Coder" /> */}
+            <SignedIn>
+        <UserButton />
+          </SignedIn>
+            <span>{user?.firstName}</span>
           </button>
           <p className='bottom-0 text-center'>all right reserved@ by coder</p>
         </div>
