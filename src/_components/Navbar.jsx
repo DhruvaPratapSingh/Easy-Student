@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { FaBars, FaArrowRight, FaTimes } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import logo from '/OIP.jpeg';
-import Icon from '/coder_logo.avif';  
-import { UserButton, SignedIn, useUser,SignInButton,SignedOut } from '@clerk/clerk-react';
+import Icon from '/coder_logo.avif'; 
+import { Button } from '@mui/material'; 
+import { UserButton, SignedIn, useUser,SignInButton,SignUpButton } from '@clerk/clerk-react';
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [linksVisible, setLinksVisible] = useState(true);
@@ -20,39 +21,63 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex justify-between items-center w-full p-4 bg-slate-300 shadow-2xl border-b-2 border-b-slate-200 rounded-b-lg relative">
+    <nav className="flex justify-between items-center w-full p-4 bg-emerald-50 shadow-2xl border-b-2 border-b-slate-200 rounded-b-lg sticky">
       <Link to="/" id="brand" className="flex gap-2 items-center flex-1">
-        <img className="object-cover max-w-12 max-h-12 mix-blend-color-burn" src={logo} alt="Logo" />
+      <img 
+  className="object-cover max-w-12 max-h-12  bg-gray-200 p-1 rounded" 
+  src={logo} 
+  alt="Logo" 
+/>
+
         <span className="text-lg font-medium font-display">EasyStudent</span>
       </Link>
       <div id="nav-menu" className="hidden lg:flex gap-12">
-        <Link to="/" className="font-medium hover:text-primary">home</Link>
-        <Link to="/contest" className="font-medium hover:text-primary">contest</Link>
-        <Link to="/internship" className="font-medium hover:text-primary">internship</Link>
-        <Link to="/preparation" className="font-medium hover:text-primary">Prep_Guide</Link>
-        <Link to="/contact" className="font-medium hover:text-primary">contact</Link>
-        <Link to="/faq" className="font-medium hover:text-primary">FAQ</Link>
-        <Link to="/applied" className="font-medium hover:text-primary">Applied Files</Link>
+        <Link to="/" className="hover:bg-blue-100 hover:shadow-2xl rounded-lg text-center py-1 px-2 shadow-xl hover:border-b-2 hover:border-blue-600">home</Link>
+        <Link to="/contest" className="hover:bg-blue-100 hover:shadow-2xl rounded-lg text-center py-1 px-2 shadow-xl hover:border-b-2 hover:border-blue-600">contest</Link>
+        <Link to="/internship" className="hover:bg-blue-100 hover:shadow-2xl rounded-lg text-center py-1 px-2 shadow-xl hover:border-b-2 hover:border-blue-600 bg-transparent">internship</Link>
+        <Link to="/preparation" className="hover:bg-blue-100 hover:shadow-2xl rounded-lg text-center py-1 px-2 shadow-xl hover:border-b-2 hover:border-blue-600">Prep_Guide</Link>
+        <Link to="/contact" className="hover:bg-blue-100 hover:shadow-2xl rounded-lg text-center py-1 px-2 shadow-xl hover:border-b-2 hover:border-blue-600">contact</Link>
+        <Link to="/faq" className="hover:bg-blue-100 hover:shadow-2xl rounded-lg text-center py-1 px-2 shadow-xl hover:border-b-2 hover:border-blue-600">FAQ</Link>
+        <Link to="/applied" className="hover:bg-blue-100 hover:shadow-2xl rounded-lg text-center py-1 px-2 shadow-xl hover:border-b-2 hover:border-blue-600">Applied Files</Link>
       </div>
       <div className="hidden lg:flex flex-1 justify-end">
-        <button className="flex gap-2 items-center border border-gray-400 px-6 py-2 rounded-lg hover:border-gray-600">
+        <Button className="flex gap-2 items-center  px-6 py-2 rounded-lg  bg-primary" >
           {/* <img className="object-cover max-w-12 max-h-10" src={Icon} alt="Coder" /> */}
-          <SignedIn>
-        <UserButton />
-          </SignedIn>
+          
           <span className="font-display font-medium">{
-           user?  user?.fullName : <SignedOut>
-            <SignInButton/>
-           </SignedOut>
+
+           user? <Button variant='outlined'><SignedIn>
+           <UserButton />
+          </SignedIn> {user?.fullName }</Button> : <div>
+           <div className='flex gap-5'>
+          <SignInButton  mode='modal'>
+            <Button variant="outlined">Login</Button>
+          </SignInButton>
+          <SignUpButton mode="modal">
+            <Button>Sign Up</Button>
+          </SignUpButton>
+        </div>
+           </div>
           }</span>
           {/* <FaArrowRight /> */}
-        </button>
+        </Button>
       </div>
 
-     <button className="p-2 lg:hidden" onClick={handleMenu}>
-     {user? <FaBars className="text-gray-600" />:<SignedOut><SignInButton/></SignedOut>}
-        
-      </button>
+      <button className="p-2 lg:hidden" onClick={handleMenu}>
+  {user ? (
+    <FaBars className="text-gray-600" />
+  ) : (
+    <div className='flex gap-2 '>
+      <SignInButton className="size-auto" mode='modal'>
+        <Button  variant="outlined">Login</Button>
+      </SignInButton>
+      <SignUpButton mode="modal">
+        <Button>Sign Up</Button>
+      </SignUpButton>
+    </div>
+  )}
+</button>
+
       {isMenuOpen && linksVisible && (
                     
         <div id="nav-dialog" className="fixed z-10 lg:hidden bg-white inset-0 p-3">

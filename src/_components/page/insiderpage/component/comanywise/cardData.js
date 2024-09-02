@@ -1,3 +1,5 @@
+import { redirect } from "react-router-dom";
+
 const cardData = [
   {
     id: 1,
@@ -8,6 +10,7 @@ const cardData = [
     titleLink: "/title/tcs",
     para1: "TCS Overview",
     para2: "TCS provides a wide range of IT services, including consulting, software development, and business process outsourcing. With a focus on innovation and customer satisfaction, TCS has established itself as a global leader in the IT industry. This section covers the company's work culture, interview process, and key areas of expertise.",
+    redirect:"https://www.geeksforgeeks.org/tcs-sde-sheet-interview-questions-and-answers/"
   },
   {
     id: 2,
@@ -18,6 +21,7 @@ const cardData = [
     titleLink: "/title/infosys",
     para1: "Infosys Overview",
     para2: "Infosys is recognized for its robust training programs, employee development initiatives, and strong emphasis on ethical business practices. This section provides insights into Infosys's interview process, company culture, and the technological domains it specializes in.",
+    redirect:"https://www.geeksforgeeks.org/infosys-sde-sheet-interview-questions-and-answers/"
   },
   {
     id: 3,
@@ -28,6 +32,7 @@ const cardData = [
     titleLink: "/title/wipro",
     para1: "Wipro Overview",
     para2: "Wipro is known for its diverse work environment, strong ethical values, and focus on client satisfaction. This section highlights Wipro's key service offerings, interview preparation tips, and the company's approach to innovation.",
+    redirect:"https://www.geeksforgeeks.org/wipro-sde-sheet-interview-questions-and-answers/"
   },
   {
     id: 4,
@@ -38,6 +43,7 @@ const cardData = [
     titleLink: "/title/amazon",
     para1: "Amazon Overview",
     para2: "Amazon is famous for its Leadership Principles, which guide its employees in decision-making and everyday work. This section explores Amazon's rigorous interview process, work culture, and key areas of business, including e-commerce, AWS, and more.",
+    redirect:"https://www.geeksforgeeks.org/amazon-sde-sheet-interview-questions-and-answers/"
   },
   {
     id: 5,
@@ -48,6 +54,7 @@ const cardData = [
     titleLink: "/title/hcl",
     para1: "HCL Overview",
     para2: "HCL is known for its focus on employee-first culture and client relationships. This section provides details on HCL's interview process, company culture, and the technological services it offers.",
+    redirect:"https://www.geeksforgeeks.org/hcl-sde-sheet-interview-questions-and-answers/"
   },
   {
     id: 6,
@@ -58,6 +65,7 @@ const cardData = [
     titleLink: "/title/cognizant",
     para1: "Cognizant Overview",
     para2: "Cognizant is renowned for its agile work environment and client-centric approach. This section discusses Cognizant's service offerings, the interview process, and the skills required to thrive in this dynamic company.",
+    redirect:"https://www.geeksforgeeks.org/cognizant-sde-sheet-interview-questions-and-answers/"
   },
   {
     id: 7,
@@ -68,6 +76,7 @@ const cardData = [
     titleLink: "/title/facebook",
     para1: "Facebook Overview",
     para2: "Facebook is famous for its open culture, emphasis on innovation, and challenging work environment. This section covers Facebook's interview process, work culture, and the technologies and products that define the company.",
+    redirect:"https://www.geeksforgeeks.org/facebookmeta-sde-sheet-interview-questions-and-answers/"
   },
   {
     id: 8,
@@ -78,6 +87,7 @@ const cardData = [
     titleLink: "/title/google",
     para1: "Google Overview",
     para2: "Google is renowned for its innovative approach, strong focus on user experience, and a culture that encourages creativity and collaboration. This section explores Google's interview process, work culture, and the groundbreaking projects it leads.",
+    redirect:"https://www.geeksforgeeks.org/google-sde-sheet-interview-questions-and-answers/"
   },
   {
     id: 9,
@@ -88,6 +98,7 @@ const cardData = [
     titleLink: "/title/apple",
     para1: "Apple Overview",
     para2: "Apple is synonymous with innovation, design excellence, and a focus on user experience. This section covers Apple's interview process, company culture, and the key products and services that have made Apple a household name.",
+    redirect:"https://www.geeksforgeeks.org/apple-sde-sheet-interview-questions-and-answers/"
   },
   {
     id: 10,
@@ -98,6 +109,7 @@ const cardData = [
     titleLink: "/title/netflix",
     para1: "Netflix Overview",
     para2: "Netflix is recognized for its innovative culture, focus on freedom and responsibility, and a relentless drive to entertain the world. This section delves into Netflix's interview process, work culture, and the key strategies that make it a leader in the entertainment industry.",
+    redirect:"https://www.geeksforgeeks.org/netflix-sde-sheet-interview-questions-and-answers/"
   }
 ];
 

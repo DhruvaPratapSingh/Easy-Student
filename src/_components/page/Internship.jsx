@@ -28,10 +28,10 @@ const Internship = () => {
 
   return (
     <div className="container mx-auto my-5">
-      <div className="flex justify-between items-center mb-5">
+      <div className="flex justify-between items-center mb-5 ">
         <div></div> {/* This empty div ensures the Select box stays on the right */}
-        <Box sx={{ minWidth: 120 }} className="ml-auto">
-          <FormControl fullWidth>
+        <Box sx={{ minWidth: 120 }} className="ml-auto bg-orange-50">
+          <FormControl fullWidth className='bg-orange-50'>
             <InputLabel id="card-select-label">Search Job</InputLabel>
             <Select
               labelId="card-select-label"
@@ -48,9 +48,9 @@ const Internship = () => {
           </FormControl>
         </Box>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 bg-transparent">
         {filteredCards.map((card) => (
-          <Card key={card.id} className="max-w-sm mx-auto">
+          <Card key={card.id} className="max-w-sm mx-auto hover:bg-cyan-50">
             <CardMedia
               className="h-36"
               image={card.image}
@@ -65,9 +65,9 @@ const Internship = () => {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button size="small">Share</Button>
+              <Button size="small" variant='outlined'>Share</Button>
               <Link to={`/learn_more/${card.id}`}>
-                <Button size="small">Learn More</Button>
+                <Button size="small" variant='contained'>Learn More</Button>
               </Link>
             </CardActions>
           </Card>

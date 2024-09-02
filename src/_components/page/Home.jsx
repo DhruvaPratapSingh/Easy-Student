@@ -24,7 +24,7 @@ const Home = () => {
 
 const Card = ({ title, path }) => {
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md w-64 text-center">
+    <div className=" p-6 rounded-lg shadow-md w-64 text-center bg-green-100">
       <Link to={path} className="text-blue-500 text-xl font-semibold hover:underline">
         {title}
       </Link>

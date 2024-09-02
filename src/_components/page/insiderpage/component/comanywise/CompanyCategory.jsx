@@ -51,7 +51,7 @@ const CompanyCategory = () => {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16">
         {filteredCards.map((card) => (
-          <Card key={card.id} className="max-w-sm mx-auto border border-gray-300 hover:border-blue-600 hover:bg-blue-100 p-1">
+          <Card key={card.id} className="max-w-sm mx-auto border border-gray-300 hover:border-blue-600 hover:bg-cyan-100 p-1">
             <CardMedia
               component="img"
               className="h-36 object-cover rounded-lg"
@@ -67,9 +67,9 @@ const CompanyCategory = () => {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button size="small">Share</Button>
-              <Link to={card.titleLink}> {/* This should correctly use the titleLink */}
-                <Button size="small">
+              <Button size="small" variant='outlined'>Share</Button>
+              <Link to={card.titleLink} className='bg-green-100'> {/* This should correctly use the titleLink */}
+                <Button variant='outlined' size="small">
                   Open it
                 </Button>
               </Link>
