@@ -22,7 +22,7 @@ const WebPage = () => {
   return (
     <div>
       <Navbar />
-      <div className="flex flex-col justify-center items-center md:flex md:justify-between w-full mt-10 ">
+      <div className=" flex flex-col md:flex-row justify-center items-center md:items-start md:justify-between w-full mt-10 ">
         <div className="w-1/2 font-extrabold md:font-extrabold m-10 p-10 text-2xl md:text-4xl flex flex-col items-center md:items-start">
         <div className="flex w-full m-4">
         <h1 className=" md:flex-row gap-3 text-wrap">
@@ -31,7 +31,7 @@ const WebPage = () => {
             alt="Waving Hand"
             className="w-14 h-14"
           />
-          hey <span className="md:ml-2 text-green-600">gamechangers<span className='hidden md:block'>🫵</span></span>
+          hey <span className="md:ml-2 text-green-600">gamechangers🫵</span>
         </h1>
       </div>
         <h2>Here You Can <span className="typing text-red-700"></span></h2>
