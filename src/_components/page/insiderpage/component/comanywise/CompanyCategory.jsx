@@ -68,7 +68,7 @@ const CompanyCategory = () => {
             </CardContent>
             <CardActions>
               <Button size="small" variant='outlined'>Share</Button>
-              <Link to={card.titleLink} className='bg-green-100'> {/* This should correctly use the titleLink */}
+              <Link  to={card.titleLink} className='bg-green-400'> {/* This should correctly use the titleLink */}
                 <Button variant='outlined' size="small">
                   Open it
                 </Button>

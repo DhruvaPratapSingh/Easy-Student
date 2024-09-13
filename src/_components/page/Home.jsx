@@ -3,8 +3,15 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
-    <div className="p-4 bg-gray-100 min-h-screen">
-      <h1 className="text-3xl font-bold text-center mb-6">Welcome</h1>
+      <div className="p-4 bg-gray-100 min-h-screen bottom-0">
+     <h1 className="text-3xl font-bold text-center mb-6 flex items-center justify-center">
+  Welcome
+  <img
+    src="https://dhruv-codes.vercel.app/_next/static/media/waving-hand.1da6fc7a.gif"
+    alt="Waving Hand"
+    className="w-14 h-14 ml-2"
+  />
+</h1>
       <div className="flex flex-wrap justify-center gap-4 mb-6">
         <Card title="Internship" path="/internship" />
         <Card title="Contest" path="/contest" />

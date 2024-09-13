@@ -31,7 +31,7 @@ const Internship = () => {
       <div className="flex justify-between items-center mb-5 ">
         <div></div> {/* This empty div ensures the Select box stays on the right */}
         <Box sx={{ minWidth: 120 }} className="ml-auto bg-orange-50">
-          <FormControl fullWidth className='bg-orange-50'>
+          <FormControl fullWidth className='bg-orange-50 '>
             <InputLabel id="card-select-label">Search Job</InputLabel>
             <Select
               labelId="card-select-label"

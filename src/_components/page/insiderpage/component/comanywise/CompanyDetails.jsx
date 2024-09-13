@@ -15,10 +15,10 @@ const handleClick=()=>{
   return (
     <div className="container mx-auto my-5">
       <h1 className="text-3xl font-bold">{card.title}</h1>
-      <img src={card.image} alt={card.title} className="w-full h-auto mt-5 rounded-lg" />
-      <p className="mt-4">{card.para1}</p>
+      <img src={card.image} alt={card.title} className="w-full h-auto md:w-100 md:h-96 object-cover mt-5 rounded-lg" />
+      <p className="mt-4 font-bold text-3xl">{card.para1}</p>
       <p className="mt-2">{card.para2}</p>
-      <button onClick={handleClick} className='bg-red-400 p-1 border border-red-950 rounded-lg shadow-2xl hover:bg-green-400 hover:border-green-950'>CLick Here</button>
+      <button onClick={handleClick} className='bg-red-400 p-1 border text-lg font-semibold border-red-950 rounded-lg shadow-2xl hover:bg-green-400 hover:border-green-950'>CLick Here</button>
     </div>
   );
 };

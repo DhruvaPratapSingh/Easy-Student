@@ -21,13 +21,9 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex justify-between items-center w-full p-4 bg-emerald-50 shadow-2xl border-b-2 border-b-slate-200 rounded-b-lg sticky">
+    <nav className="flex justify-between items-center w-full p-4 bg-emerald-50 shadow-2xl border-b-2 border-b-slate-200 rounded-b-lg relative">
       <Link to="/" id="brand" className="flex gap-2 items-center flex-1">
-      <img 
-  className="object-cover max-w-12 max-h-12  bg-gray-200 p-1 rounded" 
-  src={logo} 
-  alt="Logo" 
-/>
+      <img className="object-cover max-w-10 max-h-10 bg-green-800" src={logo} alt="Logo" />
 
         <span className="text-lg font-medium font-display">EasyStudent</span>
       </Link>
@@ -37,7 +33,7 @@ const Navbar = () => {
         <Link to="/internship" className="hover:bg-blue-100 hover:shadow-2xl rounded-lg text-center py-1 px-2 shadow-xl hover:border-b-2 hover:border-blue-600 bg-transparent">internship</Link>
         <Link to="/preparation" className="hover:bg-blue-100 hover:shadow-2xl rounded-lg text-center py-1 px-2 shadow-xl hover:border-b-2 hover:border-blue-600">Prep_Guide</Link>
         <Link to="/contact" className="hover:bg-blue-100 hover:shadow-2xl rounded-lg text-center py-1 px-2 shadow-xl hover:border-b-2 hover:border-blue-600">contact</Link>
-        <Link to="/faq" className="hover:bg-blue-100 hover:shadow-2xl rounded-lg text-center py-1 px-2 shadow-xl hover:border-b-2 hover:border-blue-600">FAQ</Link>
+        <Link to="/faq" className="hover:bg-blue-100 hover:shadow-2xl rounded-lg text-center py-1 px-2 shadow-xl hover:border-b-2 hover:border-blue-600">AI chat</Link>
         <Link to="/applied" className="hover:bg-blue-100 hover:shadow-2xl rounded-lg text-center py-1 px-2 shadow-xl hover:border-b-2 hover:border-blue-600">Applied Files</Link>
       </div>
       <div className="hidden lg:flex flex-1 justify-end">
@@ -80,7 +76,7 @@ const Navbar = () => {
 
       {isMenuOpen && linksVisible && (
                     
-        <div id="nav-dialog" className="fixed z-10 lg:hidden bg-white inset-0 p-3">
+        <div id="nav-dialog" className="fixed  lg:hidden z-50 bg-white inset-0 p-3">
        
           <div id="nav-bar" className="flex justify-between">
             <Link to="#" id="brand" className="flex gap-2 items-center">
@@ -97,7 +93,7 @@ const Navbar = () => {
             <Link to="/internship" className="font-medium text-xl hover:text-blue-600 block hover:bg-slate-400 rounded-lg p-3 hover:shadow-4xl" onClick={handleClick}>internship</Link>
             <Link to="/preparation" className="font-medium text-xl hover:text-blue-600 block hover:bg-slate-400 hover:shadow-4xl rounded-lg p-3" onClick={handleClick}>Prep_Guide</Link>
             <Link to="/contact" className="font-medium text-xl hover:text-blue-600 block hover:bg-slate-400 rounded-lg p-3 hover:shadow-4xl hover:shadow-teal-400" onClick={handleClick}>Contact Us</Link>
-            <Link to="/faq" className="font-medium text-xl hover:text-blue-600 block hover:bg-slate-400 rounded-lg p-3 hover:shadow-4xl" onClick={handleClick}>FAQ</Link>
+            <Link to="/faq" className="font-medium text-xl hover:text-blue-600 block hover:bg-slate-400 rounded-lg p-3 hover:shadow-4xl" onClick={handleClick}>ask AI</Link>
             <Link to="/applied" className="font-medium text-xl hover:text-blue-600 block hover:bg-slate-400 rounded-lg p-3 hover:shadow-4xl" onClick={handleClick}>applied</Link>
             
           </div>
